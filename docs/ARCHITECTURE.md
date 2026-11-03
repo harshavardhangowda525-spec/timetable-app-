@@ -62,7 +62,7 @@ Floot has no Postgres RLS, so isolation is enforced in the application layer:
 3. `buildDeterministicReport` produces the scorecard (with formulas), improvements, bottlenecks,
    data gaps, rule-based recommendations and next-week targets. Each one requires a minimum
    amount of data.
-4. A structured payload goes to `gpt-6-luna` with a strict JSON schema (`AI_REPORT_JSON_SCHEMA`).
+4. A structured payload goes to xAI Grok (`XAI_MODEL`, default newest available) with a strict JSON schema (`AI_REPORT_JSON_SCHEMA`).
 5. `validateAiReport` checks the response against the zod schema. Schedule changes must
    reference a known block, keep its duration and stay outside the sleep window. If they don't,
    they are downgraded to advice.

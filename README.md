@@ -37,7 +37,7 @@ The original brief named Next.js + Supabase + Vercel. The project owner chose Fl
 | Supabase Auth | Floot email/password auth (bcrypt, JWT session cookie) |
 | Row Level Security | Server-side ownership scoping on every query (see [Security](docs/ARCHITECTURE.md#security-model)) |
 | Recharts | Recharts |
-| Server-side LLM | `@floot/ai` (`gpt-6-luna`), server-only, no API key in the client |
+| Server-side LLM | xAI Grok via `helpers/grokClient` (Chat Completions, strict JSON schema), key in `XAI_API_KEY` on the server only |
 | Vercel Cron | Floot scheduled job `weeklyCoachJob` (Sundays 19:30 Asia/Kolkata) |
 | Vercel hosting | Floot hosting |
 
